@@ -1,17 +1,18 @@
 #include<stdio.h>
-#include<conio.h>
-void main()
+#include <stdio.h>
+int main()
 {
-	int num,n,s,digit;
-	clrscr();
-	printf("Sum of digits of a number\n");
-	printf("--------------------------\n");
-	s=0;n=num;
-	while(num!=0)
-	{
-	digit=num%10;
-	s=s+digit;
-	num=num/10;
-	printf("Sum of digits of %d is %d,n,s");
-	}
+  int num, rem, sum;
+
+  printf("\nEnter any number:\n");
+  scanf("%d",&num);
+
+  for (sum=0;num>0;num=num/10)
+  {
+    rem=num%10;
+    sum=sum+rem;  
+  }
+printf("\n Sum of the digits of given number = %d", sum);
+  return 0;
 }
+
